@@ -1,0 +1,16 @@
+<% if !user_signed_in? %>
+  
+  NAME  :Ram
+  mobile :7531259845
+  address:Banglore
+  
+<% end %>
+<div class="row">
+  <% @image.each do |movie| %>
+    <div class="col-sm-6 col-md-3">
+      <div class="thumbnail">
+        <%= link_to (image_tag movie.image.url(:medium), class: 'image'), movie %>
+      </div>
+    </div>
+  <% end %>
+</div>
